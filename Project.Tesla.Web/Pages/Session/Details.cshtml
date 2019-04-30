@@ -1,0 +1,72 @@
+﻿@page "{id}"
+@model Project.Tesla.Web.Pages.Session.DetailsModel
+
+@{
+    ViewData["Title"] = "Session Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Session</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            <input type="submit" value="Start Session" class="btn btn-primary" />
+        </dt>   
+    </dl>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    Behavior To be Tracked
+                </th>
+
+                <th>
+                    Points 5/25
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+
+                <td>
+                    Tightning the belt
+                </td>
+                <td>
+                    <input type="submit" value="+" class="btn btn-primary" />
+                </td>
+                <td>
+                    <input type="submit" value="-" class="btn btn-primary" />
+                </td>
+            </tr>
+            <tr>
+
+                <td>
+                    Ignoring the instructions
+                </td>
+                <td>
+                    <input type="submit" value="+" class="btn btn-primary" />
+                </td>
+                <td>
+                    <input type="submit" value="-" class="btn btn-primary" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <dl class="row">     
+        <dd class="col-sm-5">
+            <input type="submit" value="End Session" class="btn btn-primary" />
+        </dd>
+    </dl>
+
+    <div class="form-group">
+
+
+    </div>
+
+
+</div>
+

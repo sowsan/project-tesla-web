@@ -1,0 +1,64 @@
+﻿@page
+@model Project.Tesla.Web.Pages.Session.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+         
+            <th>
+                @Html.DisplayNameFor(model => model.Session[0].Type)
+            </th>
+         
+            <th>
+                @Html.DisplayNameFor(model => model.Session[0].ActivityName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session[0].ChildName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session[0].RewardGoal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Session[0].ActivityDuration)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Session) {
+        <tr>
+         
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.ActivityName)
+            </td>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.RewardGoal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActivityDuration)
+            </td>
+           
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
